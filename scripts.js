@@ -16,20 +16,20 @@ function openModal(title, description, imgSrc) {
     const modalTitle = modal.querySelector('h2');
     const modalDescription = modal.querySelector('p');
     const modalImg = modal.querySelector('img');
-
+    
     modalTitle.textContent = title;
     modalDescription.textContent = description;
     modalImg.src = imgSrc;
-
+    
     modal.style.display = "block";
 }
 
 const closeModal = document.querySelector('.close');
-closeModal.onclick = function () {
+closeModal.onclick = function() {
     document.getElementById('projectModal').style.display = "none";
 }
 
-window.onclick = function (event) {
+window.onclick = function(event) {
     if (event.target === document.getElementById('projectModal')) {
         document.getElementById('projectModal').style.display = "none";
     }
