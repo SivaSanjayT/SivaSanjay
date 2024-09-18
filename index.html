@@ -6,6 +6,7 @@
     <title>Personal Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -23,8 +24,17 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>Hello, I'm Siva Sanjay</h1>
-        <p>Game Developer with expertise in Unity and C#</p>
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="background.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1>Hello, I'm Siva Sanjay</h1>
+            <p>Game Developer with expertise in Unity and C#</p>
+            <a href="#projects" class="cta-btn">View My Work</a>
+            <img src="images/your-photo.jpg" alt="Your Photo" class="profile-pic">
+        </div>
     </section>
 
     <!-- About Me Section -->
@@ -32,10 +42,17 @@
         <div class="container">
             <div class="about-text">
                 <h2>About Me</h2>
-                <p>I’m passionate about game development and have completed a course that gave me strong foundation in creating games.
-                    I’m quick to learn new concepts, a good listener, and enjoy diving into the details of how things work. 
-                    I’m also great at communicating ideas and making sure that the work I do is clear and understandable to others. 
-                    with a deep interest in gaming, I’m excited to bring my skills and enthusiasm to projects that create new and exciting experiences.</p>
+                <p>I’m passionate about game development and have completed a course that gave me a strong foundation in creating games. I’m quick to learn new concepts, a good listener, and enjoy diving into the details of how things work. I’m also great at communicating ideas and making sure that the work I do is clear and understandable to others. With a deep interest in gaming, I’m excited to bring my skills and enthusiasm to projects that create new and exciting experiences.</p>
+                <div class="status">
+                    <div class="status-item">
+                        <h3>Open to Work</h3>
+                        <span class="status-indicator open">Yes</span>
+                    </div>
+                    <div class="status-item">
+                        <h3>Currently Employed</h3>
+                        <span class="status-indicator employed">No</span>
+                    </div>
+                </div>
             </div>
             <div class="about-img">
                 <img src="images/your-photo.jpg" alt="Your Photo">
@@ -47,26 +64,26 @@
     <section id="projects" class="projects">
         <h2>My Projects</h2>
         <div class="project-grid">
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up">
                 <img src="images/project1.jpg" alt="Project 1">
                 <h3>The Explorer</h3>
-                <p>Developed a 2D platformer game that the player has to cross many hurdles and obstacles to defeat the boss to earn freedom.</p>
-                <a href="https://github.com/SivaSanjayT/2D_Game" target="_blank">View on GitHub</a>
-                <a href="https://youtu.be/project1-demo" target="_blank">Watch Demo</a>
+                <p>Developed a 2D platformer game where the player must cross many hurdles and obstacles to defeat the boss and earn freedom.</p>
+                <a href="https://github.com/SivaSanjayT/2D_Game" target="_blank" class="btn">View on GitHub</a>
+                <a href="https://youtu.be/project1-demo" target="_blank" class="btn">Watch Demo</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up">
                 <img src="images/project2.jpg" alt="Project 2">
                 <h3>Broken Place</h3>
-                <p>Developed a 3D endless runner game that the player has to escape the huge palace that is falling continuously.</p>
-                <a href="https://github.com/SivaSanjayT/3D_Endless_Runner" target="_blank">View on GitHub</a>
-                <a href="https://youtu.be/project2-demo" target="_blank">Watch Demo</a>
+                <p>Developed a 3D endless runner game where the player has to escape a continuously collapsing palace.</p>
+                <a href="https://github.com/SivaSanjayT/3D_Endless_Runner" target="_blank" class="btn">View on GitHub</a>
+                <a href="https://youtu.be/project2-demo" target="_blank" class="btn">Watch Demo</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up">
                 <img src="images/project3.jpg" alt="Project 3">
                 <h3>Facility Zero</h3>
-                <p>Developed a 3D FPS game which has a challenging way to escape a research facility through hardships and thinking.</p>
-                <a href="https://github.com/SivaSanjayT/3D_Game" target="_blank">View on GitHub</a>
-                <a href="https://youtu.be/project3-demo" target="_blank">Watch Demo</a>
+                <p>Developed a 3D FPS game that challenges players to escape a research facility through various obstacles and puzzles.</p>
+                <a href="https://github.com/SivaSanjayT/3D_Game" target="_blank" class="btn">View on GitHub</a>
+                <a href="https://youtu.be/project3-demo" target="_blank" class="btn">Watch Demo</a>
             </div>
         </div>
     </section>
@@ -75,67 +92,95 @@
     <section id="skills" class="skills">
         <h2>Skills & Tools</h2>
         <div class="skills-grid">
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up">
                 <img src="images/unity-logo.png" alt="Unity">
                 <h3>Unity</h3>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up">
                 <img src="images/csharp-logo.png" alt="C#">
                 <h3>C#</h3>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up">
                 <img src="images/maya-icon.png" alt="Maya">
                 <h3>Maya</h3>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up">
                 <img src="images/blender-logo.png" alt="Blender">
                 <h3>Blender</h3>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up">
                 <img src="images/premiere-pro-icon.png" alt="PremierePro">
                 <h3>PremierePro</h3>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up">
                 <img src="images/after-effects-icon.png" alt="AfterEffects">
                 <h3>AfterEffects</h3>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up">
                 <img src="images/photoshop-icon.png" alt="Photoshop">
                 <h3>Photoshop</h3>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up">
                 <img src="images/GitHUB-icon.png" alt="GitHub">
                 <h3>GitHub</h3>
             </div>
-            <!-- Add more skills as needed -->
         </div>
     </section>
 
     <!-- Blog Section -->
     <section id="blog" class="blog">
         <h2>What I'm Currently Doing</h2>
-        <div class="blog-post">
-            <h3>Learning unity multiplayer</h3>
-            <p>Working on multiplayer network porting and transport and other key importance of multiplayer sections</p>
+        <div class="blog-post" data-aos="fade-up">
+            <img src="images/blog1.jpg" alt="Blog Post 1">
+            <div class="blog-info">
+                <h3>Learning Unity Multiplayer</h3>
+                <p>Working on multiplayer network porting and transport...</p>
+            </div>
         </div>
-        <div class="blog-post">
-            <h3>Learning procedual animations</h3>
-            <p>learning animation rig controlls and other areas to procedurally animate certain objects and to implement them in games</p>
+        <div class="blog-post" data-aos="fade-up">
+            <img src="images/blog2.jpg" alt="Blog Post 2">
+            <div class="blog-info">
+                <h3>Learning Procedural Animations</h3>
+                <p>Learning animation rig controls and other areas...</p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <p>Feel free to reach out to me for any collaboration or work opportunities.</p>
-        <a href="mailto:your-email@example.com">tsivasanjay@gmail.com</a>
+        <div class="contact-info">
+            <p>Feel free to reach out to me for any collaboration or work opportunities.</p>
+            <address>
+                <p>Address: Your Address Here</p>
+                <p>Mobile: Your Mobile Number Here</p>
+                <p>Email: <a href="mailto:tsivasanjay@gmail.com">tsivasanjay@gmail.com</a></p>
+                <p>Website: <a href="https://yourwebsite.com" target="_blank">yourwebsite.com</a></p>
+            </address>
+        </div>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Siva Sanjay. All Rights Reserved.</p>
+        <p>&copy; 2024 Siva Sanjay.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Duration of animations in milliseconds
+            easing: 'ease-in-out', // Easing function for animations
+            once: true // Whether animation should happen only once
+        });
+    </script>
 </body>
 </html>
