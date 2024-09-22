@@ -12,11 +12,10 @@
     <!-- Navigation Bar -->
     <header>
         <nav>
-            <ul>
+            <ul class="nav-center">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills & Tools</a></li>
-                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="https://drive.google.com/your-resume-link" target="_blank" class="resume-btn">Resume</a></li>
             </ul>
@@ -34,7 +33,6 @@
             <h1>Hi there, I'm Siva Sanjay</h1>
             <p>Game Developer with expertise in Unity and C#</p>
             <a href="#projects" class="cta-btn">View My Work</a>
-            <img src="images/your-photo.jpg" alt="Your Photo" class="profile-pic">
         </div>
     </section>
 
@@ -66,31 +64,31 @@
         <h2>My Projects</h2>
         <div class="project-grid">
             <div class="project-card" data-aos="fade-up">
-                <video autoplay muted loop>
+                <video autoplay muted loop class="project-video">
                     <source src="videos/project1-demo.mp4" type="video/mp4">
                 </video>
                 <h3>The Explorer</h3>
                 <p>Developed a 2D platformer game where the player must cross many hurdles and obstacles to defeat the boss and earn freedom.</p>
-                <a href="https://github.com/SivaSanjayT/2D_Game" target="_blank" class="btn blue-btn">View on GitHub</a>
-                <a href="https://youtu.be/project1-demo" target="_blank" class="btn blue-btn">Watch Demo</a>
+                <a href="https://github.com/SivaSanjayT/2D_Game" target="_blank" class="btn">View on GitHub</a>
+                <a href="https://youtu.be/project1-demo" target="_blank" class="btn">Watch Demo</a>
             </div>
             <div class="project-card" data-aos="fade-up">
-                <video autoplay muted loop>
+                <video autoplay muted loop class="project-video">
                     <source src="videos/project2-demo.mp4" type="video/mp4">
                 </video>
                 <h3>Broken Place</h3>
                 <p>Developed a 3D endless runner game where the player has to escape a continuously collapsing palace.</p>
-                <a href="https://github.com/SivaSanjayT/3D_Endless_Runner" target="_blank" class="btn blue-btn">View on GitHub</a>
-                <a href="https://youtu.be/project2-demo" target="_blank" class="btn blue-btn">Watch Demo</a>
+                <a href="https://github.com/SivaSanjayT/3D_Endless_Runner" target="_blank" class="btn">View on GitHub</a>
+                <a href="https://youtu.be/project2-demo" target="_blank" class="btn">Watch Demo</a>
             </div>
             <div class="project-card" data-aos="fade-up">
-                <video autoplay muted loop>
+                <video autoplay muted loop class="project-video">
                     <source src="videos/project3-demo.mp4" type="video/mp4">
                 </video>
                 <h3>Facility Zero</h3>
                 <p>Developed a 3D FPS game that challenges players to escape a research facility through various obstacles and puzzles.</p>
-                <a href="https://github.com/SivaSanjayT/3D_Game" target="_blank" class="btn blue-btn">View on GitHub</a>
-                <a href="https://youtu.be/project3-demo" target="_blank" class="btn blue-btn">Watch Demo</a>
+                <a href="https://github.com/SivaSanjayT/3D_Game" target="_blank" class="btn">View on GitHub</a>
+                <a href="https://youtu.be/project3-demo" target="_blank" class="btn">Watch Demo</a>
             </div>
         </div>
     </section>
@@ -135,24 +133,23 @@
     </section>
 
     <!-- Blog Section -->
-  <!-- Blog Section -->
-<section id="blog" class="blog">
-    <h2>What I'm Currently Doing</h2>
-    <div class="blog-post" data-aos="fade-up">
-        <img src="images/blog1.jpg" alt="Blog Post 1">
-        <div class="blog-info">
-            <h3>Learning Unity Multiplayer</h3>
-            <p>Working on multiplayer network porting and transport...</p>
+    <section id="blog" class="blog">
+        <h2>What I'm Currently Doing</h2>
+        <div class="blog-post" data-aos="fade-up">
+            <img src="images/blog1.jpg" alt="Blog Post 1" class="blog-image">
+            <div class="blog-info">
+                <h3>Learning Unity Multiplayer</h3>
+                <p>Working on multiplayer network porting and transport...</p>
+            </div>
         </div>
-    </div>
-    <div class="blog-post" data-aos="fade-up">
-        <img src="images/blog2.jpg" alt="Blog Post 2">
-        <div class="blog-info">
-            <h3>Learning Procedural Animations</h3>
-            <p>Learning animation rig controls and other areas...</p>
+        <div class="blog-post" data-aos="fade-up">
+            <img src="images/blog2.jpg" alt="Blog Post 2" class="blog-image">
+            <div class="blog-info">
+                <h3>Learning Procedural Animations</h3>
+                <p>Learning animation rig controls and other areas...</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -169,8 +166,9 @@
         <form class="contact-form">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
             <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
@@ -180,9 +178,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1200,
-        });
+        AOS.init();
     </script>
 </body>
 </html>
