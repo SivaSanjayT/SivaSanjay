@@ -23,7 +23,7 @@ header {
 
 nav ul {
     display: flex;
-    justify-content: center; /* Centered navigation */
+    justify-content: space-around;
     list-style-type: none;
 }
 
@@ -48,36 +48,42 @@ nav ul li a {
     background-color: #0056b3;
 }
 
+
 /* Hero Section */
 .hero {
-    position: relative;
-    height: 100vh;
-    background: #121212;
-    color: #fff;
+    position: center;
+    height: 80vh;
+    background: #000000;
+    color: #ffff;
     text-align: center;
     overflow: hidden;
 }
 
 .video-background {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    right: 0;
+    bottom: 0;
     z-index: -1;
 }
 
-.video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@media (min-aspect-ratio: 19/9){
+    .video-background{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .video-background{
+        width: auto;
+        height: 100%;
+    }
 }
 
 .hero-content {
-    position: relative;
+    position: center;
     z-index: 1;
-    padding: 60px 20px;
+    padding: 400px 20px;
 }
 
 .hero h1 {
@@ -93,33 +99,43 @@ nav ul li a {
 .cta-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff4081;
-    color: #fff;
-    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
     margin-top: 20px;
+    text-decoration: none;
 }
 
 /* About Me Section */
 .about {
-    padding: 60px;
-    background: #222;
+    padding: 10px;
+    background: #2b2a2aff;
 }
 
 .about .container {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .about-text h2 {
     font-size: 2.5rem;
+    color: white
+}
+.para-text{
+    font-size: 1rem;
+    color: white
 }
 
 .about-img img {
-    width: 200px; /* Adjusted size for "About Me" image */
-    height: auto;
-    border-radius: 50%;
-    transition: transform 0.5s ease;
+    width: 30%;
+    height: 30%;
+    position:relative;
+    border-radius: 10%;
+    background-color: var(--cf-primaryColorLight);
+    border-color: var(--cd-light-gray);
+    border-style: solid;
+    margin-left: 100px;
 }
 
 .about-img:hover img {
@@ -134,6 +150,7 @@ nav ul li a {
 
 .status-item {
     margin-right: 20px;
+    color: white
 }
 
 .status-item h3 {
@@ -145,7 +162,7 @@ nav ul li a {
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
-    color: #fff;
+    color: #ffffff;
 }
 
 .status-indicator.open {
@@ -155,23 +172,23 @@ nav ul li a {
 .status-indicator.employed {
     background-color: #f44336;
 }
-
 /* Projects Section */
 .projects {
     padding: 5rem 2rem;
-    background-color: #f4f4f4;
+    background-color: #000000;
 }
 
 .projects h2 {
     text-align: center;
     font-size: 2.5rem;
+    color: white;
     margin-bottom: 2rem;
 }
 
 .project-grid {
-    display: flex;
+    display: inline-flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
 }
 
 .project-card {
@@ -180,12 +197,12 @@ nav ul li a {
     padding: 1.5rem;
     margin-bottom: 2rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border-radius: 30px;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .project-card video {
@@ -209,6 +226,7 @@ nav ul li a {
 }
 
 .btn {
+    display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     text-decoration: none;
@@ -227,13 +245,15 @@ nav ul li a {
 /* Skills Section */
 .skills {
     padding: 5rem 2rem;
-    background-color: #fff;
+    background-color: #2b2a2aff;
 }
 
 .skills h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: white;
+
 }
 
 .skills-grid {
@@ -243,12 +263,11 @@ nav ul li a {
 }
 
 .skill-card {
-    background-color: #f4f4f4;
-    width: 22%; /* Adjusted width for better layout */
+    background-color: #ffffff00;
+    width: 22%;
     padding: 1.5rem;
     margin-bottom: 2rem;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     border-radius: 10px;
 }
@@ -264,30 +283,13 @@ nav ul li a {
 
 .skill-card h3 {
     font-size: 1.2rem;
-}
-
-/* Blog Section */
-.blog {
-    padding: 5rem 2rem;
-    text-align: center;
-}
-
-.blog-post {
-    display: flex;
-    align-items: center;
-    margin: 20px;
-}
-
-.blog-image {
-    width: 150px;
-    height: auto;
-    margin-right: 20px;
+    color:white;
 }
 
 /* Contact Section */
 .contact {
     padding: 5rem 2rem;
-    background-color: #333;
+    background-color: #000000;
     color: white;
     text-align: center;
 }
